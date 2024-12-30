@@ -32,8 +32,8 @@ Sxx3(1,:)=Sxx(i,j,:);
 Syy3(1,:)=Syy(i,j,:);
 Sxy3(1,:)=Sxy(i,j,:);
 
-tides_n=(0.5*(Syy3-Sxx3).*sin(2*beta)+Sxy3.*cos(2*beta));
-tides_s=Sxx3.*cos(beta).^2+Syy3.*sin(beta).^2-Sxy3.*sin(2*beta);
+tides_s=(0.5*(Syy3-Sxx3).*sin(2*beta)+Sxy3.*cos(2*beta));
+tides_n=Sxx3.*cos(beta).^2+Syy3.*sin(beta).^2+Sxy3.*sin(2*beta);
 else
     tides0=1e5;
     tides_n=tides0*sin(2*pi*(1:100)./nt);
